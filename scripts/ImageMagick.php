@@ -47,7 +47,7 @@ class ImageMagick
     public static function imageMagickCommand($command)
     {
 		//die( $command);
-		$command = str_replace('/', '\\', $command);
+		$command = str_replace('/', DIRECTORY_SEPARATOR, $command);
         exec ($command, $output, $code);
         if($code != 0)
         {
